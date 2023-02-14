@@ -12,7 +12,7 @@
     <header class="header">
       <div class="header-container container">
         <img src="whiskey.png" width="50px" height="50px" alt="whiskeyLogo" />
-        <h1 class="Logo">Whiskey To Make You Frisky</h1>
+        <h1 class="Logo">Whisky To Make You Frisky</h1>
         <nav class="nav">
           <ul class="header-nav-list">
             <li class="head-nav-list-item">
@@ -28,6 +28,35 @@
         </nav>
       </div>
     </header>
-    <main></main>
+    <main>
+      <div class="main-design-container container">
+        <h2 class="design-heading">Design Your Own</h2>
+        <div>
+          <form class="design-form" id="design-form">
+            <label for="">What type of bottle?</label>
+            <select name="bottle" id="bottle">
+              <option value="whisky">Whisky</option>
+              <option value="gin">Gin</option>
+              <option value="vodka">Vodka</option>
+            </select>
+            <label for="">What is the occasion?</label>
+            <select name="occasion" id="occasion">
+              <option value="birthday">Birthday</option>
+              <option value="anniversary">Anniversary</option>
+              <option value="graduation">Graduation</option>
+            </select>
+            <label for="" class="design-text">Message</label>
+            <textarea name="message" id="message-box"></textarea>
+            <button type="submit">Create</button>
+          </form>
+        </div>
+        <div class="bottle-container">
+          <p id="label"></p>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <script src="app.js"></script>
+    </footer>
   </body>
 </html>

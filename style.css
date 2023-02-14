@@ -70,6 +70,16 @@ body {
   max-width: 960px;
 }
 
+.main-contact-home {
+  background-image: url(distillery-form-page.jpg);
+  background-color: rgba(0, 0, 0, 0.5);
+  background-blend-mode: overlay;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 200px;
+  padding-bottom: 200px;
+}
+
 .main-home {
   background-image: url(whiskey-distillary.jpg);
   background-color: rgba(0, 0, 0, 0.5);
@@ -78,6 +88,29 @@ body {
   background-size: cover;
   padding-top: 200px;
   padding-bottom: 200px;
+}
+
+.design-heading {
+  color: #654c4f;
+  font-size: 32px;
+  letter-spacing: 0px;
+  word-spacing: 0px;
+  font-weight: normal;
+  text-decoration: none;
+  font-style: normal;
+  font-variant: normal;
+  text-transform: capitalize;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.design-form {
+  border: 2px solid var(--dp);
+  max-width: 600px;
+  min-height: 300px;
+  margin: 0 auto;
+  padding: 2rem;
 }
 
 .second-heading {
@@ -89,7 +122,7 @@ body {
   font-style: normal;
   font-variant: normal;
   text-transform: capitalize;
-  /* margin-top: 2rem; */
+  margin-top: 2rem;
   margin-bottom: 2rem;
   text-align: center;
 }
@@ -117,16 +150,29 @@ body {
   font-style: normal;
   font-variant: normal;
   text-transform: capitalize;
-  margin-top: 2rem;
+  margin-top: 0.2rem;
   margin-bottom: 2rem;
   text-align: center;
 }
 
+.design-form {
+  border: 2px solid white;
+  max-width: 600px;
+  padding: 2rem;
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
 .form {
-  border: 2px solid green;
-  /* max-width: 600px; */
+  border: 2px solid white;
+  max-width: 600px;
   margin: 0 auto;
   padding: 2rem;
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+.bottle-container {
+  background-color: pink;
+  font-size: 16px;
 }
 
 label,
