@@ -90,6 +90,16 @@ body {
   padding-bottom: 200px;
 }
 
+.basket-home-home {
+  background-image: url(basket-background.jpg);
+  background-color: rgba(0, 0, 0, 0.5);
+  background-blend-mode: overlay;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 200px;
+  padding-bottom: 200px;
+}
+
 .design-heading {
   color: #654c4f;
   font-size: 32px;
@@ -171,8 +181,13 @@ body {
 }
 
 .bottle-container {
-  background-color: pink;
+  background-color: cadetblue;
   font-size: 16px;
+  max-width: 400px;
+  margin: 0 auto;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  padding: 2rem;
 }
 
 label,

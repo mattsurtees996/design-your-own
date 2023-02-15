@@ -2,7 +2,7 @@ function Drink(type, occasion, message) {
   this.type = type;
   this.occasion = occasion;
   this.message = message;
-  //   Drink.allDrinks.push(this);
+  Drink.allDrinks.push(this);
 }
 
 const bottle = document.getElementById("bottle");
@@ -11,36 +11,63 @@ const message = document.getElementById("message-box");
 
 // let drinks = [new Drink("gin", "birthday", "message")];
 
-// Drink.allDrinks = [];
+Drink.allDrinks = [];
 
 const form = document.getElementById("design-form");
 
 form.addEventListener("submit", function (event) {
   event.preventDefault();
+  new Drink(bottle.value, occasion.value, message.value);
+  localStorage.setItem("allDrinksArray", JSON.stringify(Drink.allDrinks));
+  // let data = {
+  //   bottle: bottle.value,
+  //   occasion: occasion.value,
+  //   message: message.value,
+  // };
 
-  let data = {
-    bottle: bottle.value,
-    occasion: occasion.value,
-    message: message.value,
-  };
-
-  updateUI(data);
-  localStorage.setItem("drink", JSON.stringify(data));
+  // updateUI(data);
+  // localStorage.setItem("drink", JSON.stringify(data));
+  updateUI();
 });
 
-window.addEventListener("load", (event) => {
-  console.log("page is fully loaded");
+// window.addEventListener("load", (event) => {
+//   console.log("page is fully loaded");
 
-  const data = JSON.parse(localStorage.getItem("drink"));
+//   const data = JSON.parse(localStorage.getItem("allDrinksArray"));
 
-  updateUI(data);
-});
+//   updateUI(data);
+// });
 
-function updateUI(icons) {
-  document.getElementById("<YOUR IMAGE BOTTLE THING>");
-  document.getElementById("label");
+function updateUI() {
+  const data = JSON.parse(localStorage.getItem("allDrinksArray"));
+
+  const mainContainer = document.getElementById("main-design-container");
+
+  for (let i = 0; i < data.length; i++) {
+    let bottleLabel = document.createElement("div");
+
+    let drinkTypePara = document.createElement("p");
+    drinkTypePara.textContent = `${data[i].type}`;
+    bottleLabel.appendChild(drinkTypePara);
+
+    let drinkOccasionPara = document.createElement("p");
+    drinkOccasionPara.textContent = `${data[i].occasion}`;
+    bottleLabel.appendChild(drinkOccasionPara);
+
+    let drinkMessagePara = document.createElement("p");
+    drinkMessagePara.textContent = `${data[i].message}`;
+    bottleLabel.appendChild(drinkMessagePara);
+
+    mainContainer.appendChild(bottleLabel);
+  }
+
+  // const drinkType = document.getElementById("drink-type");
+  // const drinkOccasion = document.getElementById("drink-occasion");
+  // const drinkMessage = document.getElementById("drink-message");
+
+  // drinkType.innerHTML = data[0].type;
+  // drinkOccasion.innerHTML = data[0].occasion;
+  // drinkMessage.innerHTML = data[0].message;
+
   // Set the values from data
 }
-
-// // localStorage.getItem("bottle");
-// // console.log(localStorage);

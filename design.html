@@ -24,34 +24,40 @@
             <li class="head-nav-list-item">
               <a href="contact.html">Contact Us</a>
             </li>
+            <li class="head-nav-list-item">
+              <a href="basket.html">Basket</a>
+            </li>
           </ul>
         </nav>
       </div>
     </header>
     <main>
-      <div class="main-design-container container">
+      <div class="main-design-container container" id="main-design-container">
         <h2 class="design-heading">Design Your Own</h2>
         <div>
           <form class="design-form" id="design-form">
             <label for="">What type of bottle?</label>
             <select name="bottle" id="bottle">
-              <option value="whisky">Whisky</option>
-              <option value="gin">Gin</option>
-              <option value="vodka">Vodka</option>
+              <option value="" disabled selected>Select Your Drink</option>
+              <option value="whisky">Jack Daniels</option>
+              <option value="gin">Gordons</option>
+              <option value="vodka">Smirnoff</option>
             </select>
             <label for="">What is the occasion?</label>
             <select name="occasion" id="occasion">
+              <option value="" disabled selected>Select Your Occasion</option>
               <option value="birthday">Birthday</option>
               <option value="anniversary">Anniversary</option>
               <option value="graduation">Graduation</option>
             </select>
             <label for="" class="design-text">Message</label>
-            <textarea name="message" id="message-box"></textarea>
+            <textarea
+              name="message"
+              id="message-box"
+              placeholder="Write your message here..."
+            ></textarea>
             <button type="submit">Create</button>
           </form>
-        </div>
-        <div class="bottle-container">
-          <p id="label"></p>
         </div>
       </div>
     </main>
