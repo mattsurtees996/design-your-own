@@ -41,14 +41,23 @@ form.addEventListener("submit", function (event) {
 function updateUI() {
   const data = JSON.parse(localStorage.getItem("allDrinksArray"));
 
-  const mainContainer = document.getElementById("main-design-container");
+  const mainContainer = document.getElementById("label-container");
+  mainContainer.innerHTML = "";
 
   for (let i = 0; i < data.length; i++) {
     let bottleLabel = document.createElement("div");
 
-    let drinkTypePara = document.createElement("p");
-    drinkTypePara.textContent = `${data[i].type}`;
-    bottleLabel.appendChild(drinkTypePara);
+    if (data[i].type === "whisky") {
+      bottleLabel.classList.add("whisky");
+    } else if (data[i].type === "gin") {
+      bottleLabel.classList.add("gin");
+    } else {
+      bottleLabel.classList.add("vodka");
+    }
+
+    // let drinkTypePara = document.createElement("p");
+    // drinkTypePara.textContent = `${data[i].type}`;
+    // bottleLabel.appendChild(drinkTypePara);
 
     let drinkOccasionPara = document.createElement("p");
     drinkOccasionPara.textContent = `${data[i].occasion}`;
@@ -61,6 +70,13 @@ function updateUI() {
     mainContainer.appendChild(bottleLabel);
   }
 
+  let bottle = document.getElementById("bottle");
+  bottle.value = "";
+  let occasion = document.getElementById("occasion");
+  occasion.value = "";
+  let message = document.getElementById("message-box");
+  message.value = "";
+
   // const drinkType = document.getElementById("drink-type");
   // const drinkOccasion = document.getElementById("drink-occasion");
   // const drinkMessage = document.getElementById("drink-message");
@@ -71,3 +87,4 @@ function updateUI() {
 
   // Set the values from data
 }
+// localStorage.clear();

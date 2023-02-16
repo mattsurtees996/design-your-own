@@ -170,6 +170,7 @@ body {
   max-width: 600px;
   padding: 2rem;
   background-color: rgba(255, 255, 255, 0.25);
+  margin-bottom: 2rem;
 }
 
 .form {
@@ -228,4 +229,47 @@ textarea {
   .head-nav-list-item {
     margin-left: 2rem;
   }
+}
+
+.whisky {
+  background-image: url(jack-daniels-bottle.png);
+  width: 300px;
+  height: 450px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  margin: 0 auto;
+}
+
+.whisky p:first-of-type {
+  position: absolute;
+  top: 142.5px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+.whisky p:last-of-type {
+  position: absolute;
+  top: 235px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+.gin {
+  background-image: url(gordons-bottle.png);
+  width: 300px;
+  height: 450px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.vodka {
+  background-image: url(smirnoff-bottle.jpg);
+  width: 300px;
+  height: 450px;
+  background-repeat: no-repeat;
 }
